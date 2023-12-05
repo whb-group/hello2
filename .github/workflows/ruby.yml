@@ -1,13 +1,10 @@
-
-name: test
+name: Actions Runner Controller Demo
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
+
 jobs:
-  test:
+  Explore-GitHub-Actions:
+    # You need to use the INSTALLATION_NAME from the previous step
     runs-on: arc-runner-set
     steps:
-    - name: Run tests
-      run: ls -lah
+    - run: echo "🎉 This job uses runner scale set runners!"
