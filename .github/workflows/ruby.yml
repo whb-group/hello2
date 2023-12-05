@@ -8,3 +8,10 @@ jobs:
     runs-on: self-hosted
     steps:
     - run: echo "🎉 This job uses runner scale set runners!"
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.2.2'
+        bundler: '2.4.12'
+        bundler-cache: true
+    - run: gem install --version 0.12.1 uri
+    - run: ruby --version
